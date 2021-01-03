@@ -1,0 +1,148 @@
+.header {
+  background: $white02;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 1s ease;
+  width: 100%;
+  z-index: 1;
+
+  @include respond_to(desktop) {
+    background: rgba($white02, 0.5);
+  }
+
+  &-inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+
+    @include respond_to(tablet) {
+      padding: 20px 80px;
+    }
+
+    @include respond_to(desktop) {
+      align-items: center;
+      padding: 20px 80px;
+    }
+  }
+
+  &-logo {
+
+    &-title {
+      position: relative;
+      z-index: 1;
+      font-size: 26px;
+
+      @include respond_to(tablet) {
+        font-size: 44px;
+      }
+
+      @include respond_to(desktop) {
+
+      }
+    }
+  }
+
+  &-burger {
+
+    &-label {
+      font-size: 24px;
+      z-index: 1;
+      cursor: pointer;
+
+      @include respond_to(tablet) {
+        font-size: 44px;
+      }
+
+      @include respond_to(desktop) {
+        display: none;
+      }
+    }
+  }
+}
+
+.nav {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  transform: translateY(-120%);
+  opacity: 0;
+  transition: all 1s ease 0s;
+  display: block;
+  background: $white02;
+
+  @include respond_to(desktop) {
+    transform: translateY(0%);
+    position: static;
+    opacity: 1;
+    background: rgba($white02, 0);
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 40px;
+    height: 100%;
+
+    @include respond_to(desktop) {
+      flex-direction: row;
+      padding: 0;
+    }
+
+    @include respond_to(tablet) {
+      padding: 80px;
+    }
+  }
+
+  &-item {
+
+    & + & {
+      margin-top: 20px;
+
+      @include respond_to(tablet) {
+        margin-top: 40px;
+      }
+
+      @include respond_to(desktop) {
+        margin: 0 0 0 30px;
+      }
+    }
+    &-link {
+      text-transform: capitalize;
+      font-size: 20px;
+
+      @include respond_to(tablet) {
+        font-size: 36px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.label_cross {
+  display: none;
+}
+
+.hide {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: all 1s ease 0s;
+}
+
+.active {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: all 1s ease 0s;
+}
+
+.dn {
+  display: none;
+}
+
+.db {
+  display: block;
+}

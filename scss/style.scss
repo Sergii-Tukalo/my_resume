@@ -1,0 +1,21 @@
+// UTILS
+@import 'utils/_icons-font.scss';
+@import 'utils/font.scss';
+@import 'utils/var.scss';
+@import 'utils/mixins.scss';
+
+// GENERAL
+@import 'general/reset.scss';
+@import 'general/main.scss';
+
+// COMPONENTS
+@import 'components/header.scss';
+@import 'components/footer.scss';
+
+// PAGES
+@import 'pages/banner.scss';
+@import 'pages/about_me.scss';
+@import 'pages/content.scss';
+@import 'pages/skills.scss';
+@import 'pages/portfolio.scss';
+@import 'pages/contact_me';

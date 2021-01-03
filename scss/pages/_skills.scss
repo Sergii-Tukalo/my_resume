@@ -1,0 +1,326 @@
+.skills {
+  padding: 20px 40px;
+  background: $white03;
+
+  @include respond_to(tablet) {
+    padding: 40px 80px;
+  }
+
+  @include respond_to(desktop) {
+    padding: 40px 80px;
+  }
+
+  &-title {
+    text-transform: capitalize;
+
+    @include respond_to(tablet) {
+      font-size: 32px;
+    }
+
+    @include respond_to(desktop) {
+      font-size: 32px;
+    }
+  }
+
+  &-left {
+    display: none;
+  }
+
+  &-right {
+
+    @include respond_to(tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    @include respond_to(desktop) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &-block {
+    margin-top: 15px;
+
+    @include respond_to(tablet) {
+      width: 47%;
+      margin-top: 30px;
+    }
+
+    @include respond_to(desktop) {
+      width: 30%;
+      margin-top: 30px;
+    }
+
+    &-top {
+      display: flex;
+      justify-content: space-between;
+    }
+    &-name {
+      display: block;
+
+      //@include respond_to(tablet) {
+      //  font-size: 22px;
+      //}
+    }
+
+    &-rate_block {
+      overflow: hidden;
+      height: 20px;
+      width: 40px;
+
+      @include respond_to(tablet) {
+        font-size: 20px;
+        width: 50px;
+      }
+    }
+
+    &-rate {
+      display: flex;
+      height: 20px;
+      animation: rate 8s steps(7, end) forwards;
+
+      //@include respond_to(tablet) {
+      //  height: 26px;
+      //}
+    }
+
+    &-rate1 {
+      display: flex;
+      height: 20px;
+      animation: rate1 6s steps(5, end) forwards;
+    }
+
+    &-rate2 {
+      display: flex;
+      height: 20px;
+      animation: rate2 7s steps(6, end) forwards;
+    }
+
+    &-rate3 {
+      display: flex;
+      height: 20px;
+      animation: rate3 5s steps(4, end) forwards;
+    }
+
+    &-rate4 {
+      display: flex;
+      height: 20px;
+      animation: rate4 4s steps(3, end) forwards;
+    }
+
+    &-down {
+      height: 12px;
+      background: #d6d6d5;
+      box-shadow: 4px 3px 7px black;
+      display: flex;
+      align-items: center;
+      border-radius: 50px;
+
+      @include respond_to(tablet) {
+        height: 18px;
+        margin-top: 5px;
+      }
+
+      @include respond_to(desktop) {
+        height: 18px;
+        margin-top: 5px;
+      }
+
+      &-inner {
+        animation: line 8s forwards;
+        border-radius: 50px;
+        height: 10px;
+
+        @include respond_to(tablet) {
+          height: 14px;
+        }
+
+        @include respond_to(desktop) {
+          height: 14px;
+        }
+      }
+
+      &-inner1 {
+        animation: line1 6s forwards;
+        border-radius: 50px;
+        height: 10px;
+
+        @include respond_to(tablet) {
+          height: 14px;
+        }
+
+        @include respond_to(desktop) {
+          height: 14px;
+        }
+      }
+
+      &-inner2 {
+        animation: line2 7s forwards;
+        border-radius: 50px;
+        height: 10px;
+
+        @include respond_to(tablet) {
+          height: 14px;
+        }
+
+        @include respond_to(desktop) {
+          height: 14px;
+        }
+      }
+
+      &-inner3 {
+        animation: line3 5s forwards;
+        border-radius: 50px;
+        height: 10px;
+
+        @include respond_to(tablet) {
+          height: 14px;
+        }
+
+        @include respond_to(desktop) {
+          height: 14px;
+        }
+      }
+
+      &-inner4 {
+        animation: line4 4s forwards;
+        border-radius: 50px;
+        height: 10px;
+
+        @include respond_to(tablet) {
+          height: 14px;
+        }
+
+        @include respond_to(desktop) {
+          height: 14px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes rate {
+  from{
+
+  }
+  to {
+    transform: translate(0px, -140px);
+  }
+}
+
+@keyframes rate1 {
+  from{
+
+  }
+  to {
+    transform: translate(0px, -100px);
+  }
+}
+
+@keyframes rate2 {
+  from{
+
+  }
+  to {
+    transform: translate(0px, -120px);
+  }
+}
+
+@keyframes rate3 {
+  from{
+
+  }
+  to {
+    transform: translate(0px, -80px);
+  }
+}
+
+@keyframes rate4 {
+  from{
+
+  }
+  to {
+    transform: translate(0px, -60px);
+  }
+}
+
+
+@keyframes line {
+  0% {
+    background: #bac4be;
+    left: 0;
+    width: 0;
+  }
+  //60% {
+  //  background: linear-gradient(to right, #bac4be, rgb(80, 80, 80));
+  //}
+  100% {
+    background: linear-gradient(to right, #bac4be, rgb(80, 80, 80));
+    right: 0;
+    width: 80%;
+  }
+}
+
+@keyframes line1 {
+  0% {
+    background: #bac4be;
+    left: 0;
+    width: 0;
+  }
+  //60% {
+  //  background: linear-gradient(to right, #2ecc71, rgb(255, 174, 0));
+  //}
+  100% {
+    background: linear-gradient(to right, #bac4be, rgb(146, 146, 146));
+    right: 0;
+    width: 60%;
+  }
+}
+
+@keyframes line2 {
+  0% {
+    background: #bac4be;
+    left: 0;
+    width: 0;
+  }
+  //60% {
+  //  background: linear-gradient(to right, #2ecc71, rgb(255, 174, 0));
+  //}
+  100% {
+    background: linear-gradient(to right, #bac4be, rgb(146, 146, 146));
+    right: 0;
+    width: 70%;
+  }
+}
+
+@keyframes line3 {
+  0% {
+    background: #bac4be;
+    left: 0;
+    width: 0;
+  }
+  //60% {
+  //  background: linear-gradient(to right, #2ecc71, rgb(255, 174, 0));
+  //}
+  100% {
+    background: linear-gradient(to right, #bac4be, rgb(175, 175, 175));
+    right: 0;
+    width: 50%;
+  }
+}
+
+@keyframes line4 {
+  0% {
+    background: #bac4be;
+    left: 0;
+    width: 0;
+  }
+  100% {
+    background: linear-gradient(to right, #bac4be, rgb(187, 187, 187));
+    right: 0;
+    width: 40%;
+  }
+}

@@ -1,0 +1,60 @@
+.portfolio {
+  padding: 20px 40px;
+  background: rgb(206, 203, 203);
+
+  @include respond_to(tablet) {
+    padding: 40px 80px;
+  }
+
+  @include respond_to(desktop) {
+    padding: 40px 80px;
+  }
+
+  &-title {
+    text-transform: capitalize;
+
+    @include respond_to(tablet) {
+      font-size: 32px;
+    }
+
+    @include respond_to(desktop) {
+      font-size: 32px;
+    }
+  }
+
+  &-block {
+    margin-top: 15px;
+    border-radius: 20px;
+    background: rgba($color: #494b4d, $alpha: 0.2);
+    padding: 10px ;
+
+    @include respond_to(tablet) {
+      margin-top: 20px;
+    }
+
+    @include respond_to(desktop) {
+      margin-top: 30px;
+    }
+  }
+
+  &-part {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+
+    &-link {
+      display: flex;
+      justify-content: center;
+    }
+
+    &-img {
+
+    }
+  }
+}
+
+
+.portfolio-part-img {
+  width: 90%;
+
+}

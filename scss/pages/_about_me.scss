@@ -1,0 +1,74 @@
+.about_me {
+  display: flex;
+
+  &-left {
+    width: 39%;
+    display: none;
+    background: url("../images/about_me.jpg") no-repeat center;
+    background-size: cover;
+
+    @include respond_to(desktop) {
+      display: block;
+    }
+
+    &-img {
+      width: 100%;
+    }
+  }
+
+  &-right {
+    background: $white03;
+    padding: 20px 40px;
+    width: 100%;
+    overflow: hidden;
+
+    @include respond_to(tablet) {
+      padding: 40px 80px;
+    }
+
+    @include respond_to(desktop) {
+      padding: 40px 80px;
+    }
+
+    &-title {
+      text-transform: capitalize;
+
+      @include respond_to(tablet) {
+        font-size: 32px;
+      }
+
+      @include respond_to(desktop) {
+        font-size: 40px;
+      }
+    }
+
+    &-text {
+      text-align: justify;
+      line-height: 1.5;
+      font-size: 14px;
+      margin-top: 15px;
+      color: #3b4548;
+      transform: translateY(-120%);
+      opacity: 0;
+      transition: all 1.5s ease 0s;
+
+      @include respond_to(tablet) {
+        font-size: 22px;
+      }
+
+      @include respond_to(desktop) {
+        font-size: 26px;
+      }
+    }
+  }
+}
+
+.anim_items {
+      overflow: hidden;
+}
+
+.about_me-right-text._active,
+._active .about_me-right-text {
+  transform: translateY(0);
+  opacity: 1;
+}

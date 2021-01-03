@@ -1,0 +1,140 @@
+.content {
+  background: rgb(206, 203, 203);
+  padding: 20px 40px;
+  //display: flex;
+  //flex-wrap: wrap;
+
+  @include respond_to(mobile) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @include respond_to(tablet) {
+    padding: 40px 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @include respond_to(desktop) {
+    padding: 40px 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+
+
+  &-checkbox,
+  &-checkbox1,
+  &-checkbox2,
+  &-checkbox3 {
+    display: none;
+  }
+
+  &-checkbox:checked ~ .content-block-direction,
+  &-checkbox1:checked ~ .content-block-direction1,
+  &-checkbox2:checked ~ .content-block-direction2,
+  &-checkbox3:checked ~ .content-block-direction3 {
+    display: block;
+    animation: www 1s ease forwards;
+  }
+
+  &-block {
+
+    & + & {
+      margin-top: 15px;
+
+      @include respond_to(tablet) {
+        margin: 0;
+      }
+
+      @include respond_to(desktop) {
+        margin: 0;
+      }
+    }
+
+    @include respond_to(mobile) {
+      width: 49%;
+      text-align: center;
+
+      &:nth-child(2) {
+        margin-top: 0px;
+      }
+
+      &:nth-child(3), &:nth-child(4) {
+        margin-top: 15px;
+      }
+    }
+
+    @include respond_to(tablet) {
+      width: 49%;
+      text-align: center;
+
+      &:nth-child(3), &:nth-child(4) {
+        margin-top: 25px;
+        }
+    }
+
+    @include respond_to(desktop) {
+      width: 25%;
+      text-align: center;
+
+      &:nth-child(3), &:nth-child(4) {
+        margin-top: 0px;
+      }
+    }
+
+    &-wrapper {
+      overflow: hidden;
+    }
+
+    &-title_name {
+      text-transform: capitalize;
+      display: inline;
+      cursor: pointer;
+
+      @include respond_to(tablet) {
+        font-size: 30px;
+      }
+
+      &:hover {
+        text-shadow: 6px 4px 9px rgb(65, 65, 65);
+      }
+    }
+
+    &-title_second {
+      font-weight: bold;
+    }
+
+    &-direction,
+    &-direction1,
+    &-direction2,
+    &-direction3 {
+      margin-top: 15px;
+      display: none;
+      overflow: hidden;
+    }
+
+    &-name {
+      font-size: 14px;
+      line-height: 1.5;
+
+      @include respond_to(tablet) {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@keyframes www {
+  from {
+    transform: translateY(-110%);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

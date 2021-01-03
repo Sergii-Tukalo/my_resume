@@ -1,0 +1,48 @@
+.footer {
+  background: rgb(206, 203, 203);
+  padding: 25px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include respond_to(tablet) {
+    padding: 35px 80px;
+  }
+
+  @include respond_to(desktop) {
+    padding: 35px 80px;
+  }
+
+  &-copyright {
+
+    @include respond_to(tablet) {
+      font-size: 26px;
+     }
+
+    @include respond_to(desktop) {
+      font-size: 26px;
+    }
+  }
+
+  &-icon {
+    margin-top: 15px;
+
+    &-link {
+      font-size: 24px;
+
+      &>i {
+        @include respond_to(tablet) {
+          font-size: 32px;
+        }
+        
+        @include respond_to(desktop) {
+          font-size: 32px;
+        }
+      }
+
+      & + & {
+        margin-left: 10px;
+      }
+    }
+  }
+}

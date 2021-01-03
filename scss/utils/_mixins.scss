@@ -1,0 +1,21 @@
+@mixin site_width($width) {
+	width: 100%;
+	max-width: $width + px;
+	margin: 0 auto;
+}
+
+@mixin respond_to($device) {
+	@if ($device==mobile) {
+		@media(min-width: $mobile + px) and (max-width: $tablet - 1 + px) {
+			@content;
+		}
+	} @else if ($device==tablet) {
+		@media (min-width: $tablet + px) and (max-width: $wide_desktop - 1 + px) {
+			@content;
+		}
+	} @else if ($device==desktop) {
+		@media(min-width: $wide_desktop + px) {
+			@content;
+		}
+	} 
+}
