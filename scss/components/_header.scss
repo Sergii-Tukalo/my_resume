@@ -1,5 +1,4 @@
 .header {
-  background: $white02;
   position: fixed;
   top: 0;
   left: 0;
@@ -8,7 +7,7 @@
   z-index: 1;
 
   @include respond_to(desktop) {
-    background: rgba($white02, 0.5);
+    background: $white02;
   }
 
   &-inner {
@@ -17,7 +16,7 @@
     padding: 20px 40px;
 
     @include respond_to(tablet) {
-      padding: 20px 80px;
+      padding: 40px 80px;
     }
 
     @include respond_to(desktop) {
@@ -27,26 +26,41 @@
   }
 
   &-logo {
+    &-link {
+      display: flex;
+      align-items: center;
+    }
+
+    &-img {
+      width: 130px;
+      display: none;
+
+      @include respond_to(desktop) {
+        display: block;
+      }
+    }
+    &-logotype {
+      font-size: 24px;
+    }
 
     &-title {
       position: relative;
       z-index: 1;
       font-size: 26px;
 
-      @include respond_to(tablet) {
-        font-size: 44px;
+      @include respond_to(mobile_small) {
+        display: none;
       }
 
-      @include respond_to(desktop) {
-
+      @include respond_to(tablet) {
+        font-size: 44px;
       }
     }
   }
 
   &-burger {
-
     &-label {
-      font-size: 24px;
+      font-size: 28px;
       z-index: 1;
       cursor: pointer;
 
@@ -94,17 +108,26 @@
     }
 
     @include respond_to(tablet) {
-      padding: 80px;
+      padding: 40px 80px;
     }
   }
 
   &-item {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .5s;
+
+    &:hover {
+      background-size: 100% 2px;
+    }
 
     & + & {
-      margin-top: 20px;
+      margin-top: 15px;
 
       @include respond_to(tablet) {
-        margin-top: 40px;
+        margin-top: 30px;
       }
 
       @include respond_to(desktop) {
@@ -113,10 +136,15 @@
     }
     &-link {
       text-transform: capitalize;
-      font-size: 20px;
+      font-size: 28px;
 
       @include respond_to(tablet) {
-        font-size: 36px;
+        font-size: 40px;
+        font-weight: bold;
+      }
+
+      @include respond_to(desktop) {
+        font-size: 20px;
         font-weight: bold;
       }
     }
@@ -125,6 +153,10 @@
 
 .label_cross {
   display: none;
+}
+
+.label_burger {
+  color:  $black03;
 }
 
 .hide {

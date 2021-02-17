@@ -1,6 +1,7 @@
 .contact_me {
   background: $white03;
   padding: 20px 40px;
+  text-align: center;
 
   @include respond_to(tablet) {
     padding: 40px 80px;
@@ -24,127 +25,43 @@
     }
   }
 
-  &-wrapper {
-
-    @include respond_to(tablet) {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    @include respond_to(desktop) {
-      display: flex;
-      justify-content: space-between;
-    }
-  }
-
   &-info {
-    font-size: 14px;
-    color: #505050;
-    margin: 20px 0;
+    font-size: 16px;
+    margin-top: 20px;
     line-height: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     @include respond_to(tablet) {
-      font-size: 18px;
-      width: 90%;
+      font-size: 26px;
       margin: 0;
+      line-height: 2.5;
     }
 
     @include respond_to(desktop) {
-      font-size: 22px;
-      width: 60%;
+      font-size: 17px;
       margin: 0;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+
+    @include respond_to(desktop_tablet) {
+      font-size: 22px;
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
     }
   }
 
   &-content {
+    display: flex;
 
     &-name {
       font-weight: bold;
-      font-family: cursive;
       text-transform: capitalize;
-    }
-  }
-
-  &-form {
-
-    &-input {
-      padding: 15px 20px;
-      outline: none;
-      border: 0px;
-      width: 100%;
-      color: $black02;
-      background: linear-gradient(to right, #bac4be, #a7a7a7);
-
-      @include respond_to(tablet) {
-        font-size: 16px;
-        padding: 20px 30px;
-      }
-
-      @include respond_to(desktop) {
-        font-size: 20px;
-        padding: 20px 30px;
-      }
-
-      &::placeholder {
-        color: $black02;
-      }
-
-      &:nth-child(2) {
-        margin: 20px 0;
-      }
-    }
-
-    &-textarea {
-      min-height: 150px;
-      outline: none;
-      padding: 15px 20px;
-      border: 0px;
-      resize: none;
-      width: 100%;
-      font: 400 13.3333px Arial;
-      color: $black02;
-      background: linear-gradient(to right, #bac4be, #a7a7a7);
-
-      @include respond_to(tablet) {
-        font-size: 16px;
-        padding: 20px 30px;
-      }
-
-      @include respond_to(desktop) {
-        font-size: 20px;
-        padding: 20px 30px;
-      }
-
-      &::placeholder {
-        color: $black02;
-      }
-    }
-
-    &-button {
-      margin-top: 20px;
-      padding: 10px 30px;
-      text-transform: uppercase;
-      border: 0px;
-      color: $black02;
-      background: linear-gradient(to right, #bac4be, #a7a7a7);
-      outline: none;
-      font-size: 12px;
-      font-weight: 600;
-      border: 1px solid transparent;
-
-      @include respond_to(tablet) {
-        font-size: 14px;
-        padding: 15px 35px;
-      }
-
-      &:hover {
-        box-shadow: 6px 4px 9px rgb(65, 65, 65);
-        border: 1px solid $black02;
-        border-radius: 2px;
-      }
-      &:active {
-        box-shadow: 0px 0px 0px rgb(65, 65, 65);
-      }
+      margin-right: 10px;
     }
   }
 }

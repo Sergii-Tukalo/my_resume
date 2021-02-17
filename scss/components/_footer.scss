@@ -14,7 +14,6 @@
   }
 
   &-copyright {
-
     @include respond_to(tablet) {
       font-size: 26px;
      }
@@ -34,7 +33,7 @@
         @include respond_to(tablet) {
           font-size: 32px;
         }
-        
+
         @include respond_to(desktop) {
           font-size: 32px;
         }

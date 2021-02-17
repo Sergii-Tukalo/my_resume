@@ -4,6 +4,9 @@ $('.portfolio-block').slick({
   arrows: false,
   autoplay: true,
   autoplaySpeed: 5000,
+  arrows: true,
+  prevArrow: $(".portfolio-arrows-left"),
+  nextArrow: $(".portfolio-arrows-right"),
 
   responsive: [
     {

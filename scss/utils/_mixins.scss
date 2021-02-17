@@ -5,7 +5,11 @@
 }
 
 @mixin respond_to($device) {
-	@if ($device==mobile) {
+	@if ($device==mobile_small) {
+		@media(min-width: $mobile_small + px) and (max-width: $mobile - 1 + px) {
+			@content;
+		}
+	}	@if ($device==mobile) {
 		@media(min-width: $mobile + px) and (max-width: $tablet - 1 + px) {
 			@content;
 		}
@@ -13,9 +17,17 @@
 		@media (min-width: $tablet + px) and (max-width: $wide_desktop - 1 + px) {
 			@content;
 		}
-	} @else if ($device==desktop) {
+	} @else if ($device==desktop_tablet) {
+		@media (min-width: $desktop_tablet + px) {
+			@content;
+		}
+	}	@else if ($device==desktop) {
 		@media(min-width: $wide_desktop + px) {
 			@content;
 		}
-	} 
+	}@else if ($device==mobile_plus) {
+		@media(min-width: $mobile_plus + px) {
+			@content;
+		}
+	}
 }

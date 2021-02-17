@@ -1,5 +1,6 @@
 .about_me {
   display: flex;
+  text-align: center;
 
   &-left {
     width: 39%;
@@ -64,7 +65,7 @@
 }
 
 .anim_items {
-      overflow: hidden;
+  overflow: hidden;
 }
 
 .about_me-right-text._active,
